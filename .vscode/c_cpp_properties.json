@@ -31,7 +31,7 @@
 			// "intelliSenseMode": "linux-gcc-x64",
 			"intelliSenseMode": "linux-gcc-arm64",
 			// "compilerPath": "/usr/bin/gcc",
-			"compilerPath": "${config:COMPILER}",
+			"compilerPath": "${config:COMPILER_PATH}",
 			"compilerArgs": [
 				"ARCH=arm64",
 				"CROSS_COMPILE=${config:CROSS_COMPILER}"
