@@ -1,0 +1,46 @@
+{
+	"configurations": [
+		{
+			"name": "Linux",
+			"includePath": [
+				"${workspaceFolder}/**",
+				// "$(config:SDKTARGETSYSROOT)/lib/modules/5.15.71-bsp-yocto-nxp-i.mx8mp-pd23.1.0/build/include/**",
+				"${config:KERNEL_DIR}/include/**",
+				"${config:KERNEL_DIR}/arch/arm64/include/**",
+				"${config:KERNEL_DIR}/arch/arm64/include/generated/**"
+
+				// "${config:KERNEL_DIR}/arch/sh/include/uapi/**",
+				// "${config:KERNEL_DIR}/include/linux/**",
+				// "${config:KERNEL_DIR}/include/generated/**",
+				// "${config:KERNEL_DIR}/include/asm-generic/**",
+				// "${config:KERNEL_DIR}/arch/arm64/include/**",
+				// "${config:KERNEL_DIR}/arch/arm64/include/generated/**",
+				// "${config:KERNEL_DIR}/tools/include/**",
+				// "${config:KERNEL_DIR}/tools/lib/**"
+			],
+			"defines": [
+				"__GNUC__",
+				"__KERNEL__",
+				"MODULE"
+				// "KBUILD_MODNAME='${config:PROGRAM_NAME}'"
+			],
+			"configurationProvider": "includePath",
+			"cStandard": "c11",
+			// "cppStandard": "gnu++14",
+			// "intelliSenseMode": "clang-arm64",
+			// "intelliSenseMode": "linux-gcc-x64",
+			"intelliSenseMode": "linux-gcc-arm64",
+			// "compilerPath": "/usr/bin/gcc",
+			"compilerPath": "${config:COMPILER}",
+			"compilerArgs": [
+				"ARCH=arm64",
+				"CROSS_COMPILE=${config:CROSS_COMPILER}"
+				// "--sysroot=${config:SDKTARGETSYSROOT}"
+			],
+			"forcedInclude": [
+				"${config:KERNEL_DIR}/include/generated/autoconf.h"
+			]
+		}
+	],
+	"version": 4
+}
