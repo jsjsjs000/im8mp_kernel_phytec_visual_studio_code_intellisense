@@ -1,0 +1,19 @@
+{
+		/* Yocto SDK Configuration */
+	"ARCH": "aarch64-phytec-linux",
+	"OECORE_NATIVE_SYSROOT": "/opt/ampliphy-vendor-xwayland/BSP-Yocto-NXP-i.MX8MP-PD23.1.0/sysroots/x86_64-phytecsdk-linux",
+	"COMPILER_PATH": "${config:OECORE_NATIVE_SYSROOT}/usr/bin/aarch64-phytec-linux/aarch64-phytec-linux-gcc",
+	"SDKTARGETSYSROOT": "/opt/ampliphy-vendor-xwayland/BSP-Yocto-NXP-i.MX8MP-PD23.1.0/sysroots/cortexa53-crypto-phytec-linux",
+	"CROSS_COMPILER": "${config:SDKTARGETSYSROOT}/usr/bin/aarch64-phytec-linux-",
+	"YOCTO_ENVIRONMENT": "/opt/ampliphy-vendor-xwayland/BSP-Yocto-NXP-i.MX8MP-PD23.1.0/environment-setup-cortexa53-crypto-phytec-linux",
+
+		/* Yocto SDK Constants */
+	"CC_PREFIX": "${config:OECORE_NATIVE_SYSROOT}/usr/bin/${config:ARCH}/${config:ARCH}-",
+	"CXX": "${config:CC_PREFIX}g++ --sysroot=${config:SDKTARGETSYSROOT}",
+	"CC": "${config:CC_PREFIX}gcc --sysroot=${config:SDKTARGETSYSROOT}",
+
+		/* Kernel */
+	"KERNEL_DIR": "~/linux-imx-v5.15.71_2.2.2-phy",
+
+	"files.associations": {},
+}
